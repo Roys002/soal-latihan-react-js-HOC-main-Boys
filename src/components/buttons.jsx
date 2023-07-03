@@ -1,18 +1,12 @@
 import React from 'react'
-// import { useState } from "react";
-function buttons() {
-    // const [nomor, setNomor] = useState(0);
-
-    // const handlerNomor = () => {
-    //   setNomor(nomor + counter);
-    // };
+import withCalculate from '../utils/withCalculate'
+function buttons(props) {
   return (
     <div>
-    <h3>x + {counter}</h3>
-    <p>{nomor}</p>
-    <button onClick={handlerNomor}>tambah</button>
-  </div>
+      <h3>x + {props.counter}</h3>
+    <p>{props.nomor}</p>
+    <button onClick={props.handleNomor}>tambah</button>
+    </div>
   )
 }
-
-export default buttons
+export default withCalculate(buttons)

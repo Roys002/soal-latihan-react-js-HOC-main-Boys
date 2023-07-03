@@ -1,6 +1,5 @@
 /* menggunakan with berarti dia HOC menggunakan use berarti HOF  */
 import React, { useState } from "react";
-
 function withCalculate(OriginalComponent) {
   return (props) => {
     const [nomor, setNomor] = useState(0);
@@ -8,7 +7,6 @@ function withCalculate(OriginalComponent) {
     const handleNomor = () => {
       setNomor(nomor + props.counter);
     };
-
     return (
       <OriginalComponent nomor={nomor} handleNomor={handleNomor} {...props} />
     );
