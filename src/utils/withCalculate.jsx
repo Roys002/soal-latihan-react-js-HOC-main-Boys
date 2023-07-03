@@ -1,3 +1,4 @@
+/* menggunakan with berarti dia HOC menggunakan use berarti HOF  */
 import React, { useState } from "react";
 
 function withCalculate(OriginalComponent) {
